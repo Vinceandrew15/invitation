@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DSGN Team Building</title>
+    <style>
+        :root {
+            --primary: #2563eb;
+            --dark: #1e293b;
+            --light: #f8fafc;
+            --accent: #f59e0b;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            color: var(--dark);
+            background-color: var(--light);
+        }
+
+        header {
+            background: var(--dark);
+            color: white;
+            padding: 4rem 1rem;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        h2 {
+            border-bottom: 3px solid var(--primary);
+            display: inline-block;
+            margin-bottom: 2rem;
+        }
+
+        /* Program Styles */
+        .schedule {
+            list-style: none;
+            padding: 0;
+        }
+
+        .event-item {
+            background: white;
+            margin-bottom: 1rem;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        .time {
+            font-weight: bold;
+            color: var(--primary);
+            min-width: 80px;
+        }
+
+        /* Map/Location Styles */
+        .location-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            margin-top: 1rem;
+        }
+
+        .map-container {
+            width: 100%;
+            height: 350px;
+            background: #e2e8f0;
+            border-radius: 8px;
+            margin-top: 1rem;
+            overflow: hidden;
+        }
+
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            font-size: 0.9rem;
+            color: #64748b;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>DSGN Team Building</h1>
+    <p>Welcome! Please scroll down for more details</p>
+</header>
+
+<div class="container">
+    
+    <section id="program">
+        <h2>Event Program</h2>
+        <div class="schedule">
+            <div class="event-item">
+                <div class="time">03:00 - 4:00 PM</div>
+                <div class="details">
+                    <strong>Arrival</strong>
+                    <br>DSGN Team Members and Guest should arrive at the given schedule</p>
+                </div>
+            </div>
+            <div class="event-item">
+                <div class="time">4:00 – 4:30 PM</div>
+                <div class="details">
+                    <strong>Preparation</strong>
+                    <br>Before proceeding, it has to have a short preparation for it to be more organize.</p>
+                </div>
+            </div>
+            <div class="event-item">
+                <div class="time">4:30 – 5:00 PM</div>
+                <div class="details">
+                    <strong>DSGN Team Meeting and Discussion</strong>
+                    <br>Updates, Plans, Strategy, etc.</p>
+                </div>
+            </div>
+<div class="event-item" style="display: block;"> <div style="display: flex; gap: 1.5rem;">
+        <div class="time">5:00 - 6:00 PM</div>
+        <div class="details">
+            <strong>Parlour Games</strong>
+            <br>
+            <button onclick="toggleGames()" style="margin-top: 10px; padding: 5px 15px; cursor: pointer; background: var(--primary); color: white; border: none; border-radius: 4px;">
+                View Games & Mechanics
+            </button>
+        </div>
+    </div>
+
+    <div id="gameList" style="display: none; margin-top: 1rem; padding: 1rem; background: #f1f5f9; border-radius: 8px; border-left: 4px solid var(--primary);">
+                <h4 style="margin-top: 0;">Game List</h4>
+                <ul style="padding-left: 20px;">
+                    <li>
+                        <strong>Guess the Logo!</strong> 
+                        It is simple, we show the logo and you guess it.
+                    </li>
+                    <br>
+                    <li>
+                        <strong>"Nakuha ang Punto"</strong> 
+                        A Bible Game: A number of items are arranged on the table. To play it, then. We read you a verse from the Bible, and when you see something that relates to the items on the table, you select it and explain it why.
+                    </li>
+                    <br>
+                    <li>
+                        <strong>Guess the Person</strong> 
+                        We will give you a clue about a person and you have to guess who is that person.
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <script>
+        function toggleGames() {
+            var x = document.getElementById("gameList");
+            if (x.style.display === "none") {
+                x.style.display = "block";
+            } else {
+                x.style.display = "none";
+            }
+        }
+        </script>            
+        
+        <div class="event-item">
+                <div class="time">7:00 - 8:00 PM</div>
+                <div class="details">
+                    <strong>Dinner</strong>
+                    <br>Time to fill up those bellies!</p>
+                </div>
+            </div>
+            <div class="event-item">
+                <div class="time">8:00 - 10:00 PM</div>
+                <div class="details">
+                    <strong>Bonding Time</strong>
+                    <br>Spend time with members and friends.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+  <section id="location" style="margin-top: 4rem;">
+        <h2>Location</h2>
+        <div class="location-card">
+            <strong>Ace & King Pool Side Bar and Cafe</strong>
+            <p>In-front of MD-5, Canocotan<br>Tagum City, Philippines 8100</p>
+            
+            <div class="map-container">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3954.2647!2d125.787263!3d7.4247029!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x32f9535f7c7ade51%3A0xe2e1f6a21cc1514c!2sAce%20%26%20King%20Pool%20Side%20Bar%20and%20Cafe!5e0!3m2!1sen!2sph!4v1700000000000" 
+                    width="100%" 
+                    height="350" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+</div>
+
+<footer>
+    <p>&copy; 2026 DSGN. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
